@@ -11,6 +11,7 @@ const Thumnail = forwardRef(({result}, ref) => {
                 src={`${BASE_URL}${result.backdrop_path || result.poster_path}` || `${BASE_URL}${result.poster_path}`}
                 height={1000}
                 width={1920}
+                alt="..."
             />
             <div>
                 <p className="truncate max-w-md">{result.overview}</p>
@@ -27,5 +28,7 @@ const Thumnail = forwardRef(({result}, ref) => {
     )
 }
 )
+
+Thumnail.displayName = 'Thumnail';
 
 export default Thumnail
